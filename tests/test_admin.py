@@ -1,11 +1,9 @@
 # -*- coding: utf-8 -*-
-from __future__ import absolute_import, unicode_literals
 
 import logging
 
 import pytest
 from django.urls import reverse
-from django.utils.translation import gettext as _
 
 from crashlog.models import Error
 

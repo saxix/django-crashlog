@@ -1,11 +1,7 @@
 # -*- coding: utf-8 -*-
-from __future__ import absolute_import, print_function, unicode_literals
-
 import logging
 import socket
 import sys
-
-from django.utils.deprecation import MiddlewareMixin
 
 from crashlog.config import conf
 
@@ -31,7 +27,6 @@ def process_exception(exception, request=None, message_user=False):
         url = 'N/A'
         user = 'N/A'
 
-
     defaults = dict(
         class_name=class_name,
         message=str(exception),
@@ -50,6 +45,14 @@ def process_exception(exception, request=None, message_user=False):
         logger.critical(exc)
 
 
-class CrashLogMiddleware(MiddlewareMixin):
+class CrashLogMiddleware(object):
+
+    def __init__(self, get_response=None):
+        self.get_response = get_response
+        super().__init__()
+
     def process_exception(self, request, exception):
         process_exception(exception, request)
+
+    def __call__(self, request):
+        return self.get_response(request)

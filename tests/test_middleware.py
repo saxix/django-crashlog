@@ -72,8 +72,8 @@ def test_message_user(django_app, admin_user):
 
     assert Error.objects.filter(class_name='IndexError').exists()
 
+
 @pytest.mark.django_db
 def test_simple(rf, django_app, admin_user):
-    request = rf.get("/my/home/url")
     error = process_exception(PermissionDenied())
     assert error.pk

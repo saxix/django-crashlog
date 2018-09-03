@@ -1,4 +1,8 @@
+Release 0.2
+-----------
+* drop support Django < 2.0
+
+
 Release 0.1
 -----------
-
 * initial release
