@@ -14,15 +14,11 @@
 import os
 import sys
 
-from django.conf import settings
 
 import crashlog as app
 
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..')))
 
-
-settings.configure()
-settings.SITE_ID = 1
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
