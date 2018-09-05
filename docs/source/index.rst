@@ -9,19 +9,18 @@ Each exception is available in the Admin, with the same layout of the Django deb
 
 
 Install
-======================
+=======
 
-configure your settings.py
-
-.. code-block::python
+configure your `settings.py`, add `CrashLogMiddleware` after `AuthenticationMiddleware`::
 
     INSTALLED_APPS = (
         ....,
         'crashlog'
     )
 
+
     MIDDLEWARE_CLASSES = (
-        ....,
+        'django.contrib.auth.middleware.AuthenticationMiddleware',
         'crashlog.middleware.CrashLogMiddleware',
     )
 
@@ -38,9 +37,8 @@ Manually log exception
 Ignore some Exceptions
 ======================
 
-To skip logging of specific exception, configure your ``settings`` as below
+To skip logging of specific exception, configure your ``settings`` as below::
 
-.. code-block::python
 
     CRASHLOG_IGNORE_EXCEPTIONS = ('module.name.Exception',)
 
