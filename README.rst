@@ -25,13 +25,4 @@ configure your settings.py
         'crashlog.middleware.CrashLogMiddleware',
     )
 
-Avoid logging of exceptions
-============================================
-
-To skip logging of specific exception, configure your ``settings`` as below
-
-.. code-block::python
-
-    CRASHLOG_IGNORE_EXCEPTIONS = ('module.name.Exception',)
-
-
+See full doc at https://django-crashlog.readthedocs.io/en/develop/

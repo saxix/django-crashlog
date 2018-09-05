@@ -25,8 +25,18 @@ configure your settings.py
         'crashlog.middleware.CrashLogMiddleware',
     )
 
-Avoid logging of exceptions
-============================================
+Manually log exception
+======================
+::
+
+    try:
+        ...
+    except Exception as e:
+        process_Exception(e)
+
+
+Ignore some Exceptions
+======================
 
 To skip logging of specific exception, configure your ``settings`` as below
 
@@ -39,8 +49,8 @@ Changelog
 =========
 
 .. toctree::
-    :maxdepth: 2
+:maxdepth: 2
 
 
-    changes
+        changes
 
