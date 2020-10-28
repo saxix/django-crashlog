@@ -21,3 +21,5 @@ pytest.xml
 flake.out
 pep8.out
 *.xml
+.env
+.envrc

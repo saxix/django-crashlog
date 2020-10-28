@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 from admin_extra_urls.mixins import _confirm_action
 from django.contrib import admin
 

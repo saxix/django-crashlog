@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 from django.conf import settings
 from django.core.signals import setting_changed
 from django.utils.module_loading import import_string
@@ -6,7 +5,7 @@ from django.utils.module_loading import import_string
 IGNORE_EXCEPTIONS = []
 
 
-class Config(object):
+class Config:
     _ignore_exceptions = []
 
 
