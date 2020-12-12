@@ -1,7 +1,6 @@
-from admin_extra_urls.mixins import _confirm_action
+from admin_extra_urls.decorators import link
+from admin_extra_urls.mixins import ExtraUrlMixin, _confirm_action
 from django.contrib import admin
-
-from admin_extra_urls.extras import ExtraUrlMixin, link
 from django.db import connection
 
 from crashlog.models import Error

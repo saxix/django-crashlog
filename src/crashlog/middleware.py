@@ -2,9 +2,9 @@ import logging
 import socket
 import sys
 
-from crashlog.config import conf
-
 from django.views.debug import ExceptionReporter
+
+from crashlog.config import conf
 
 from .models import Error
 
