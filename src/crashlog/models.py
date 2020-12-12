@@ -1,14 +1,10 @@
-# -*- coding: utf-8 -*-
-from __future__ import absolute_import, print_function, unicode_literals
-
-import six
 from django.contrib import messages
-from django.urls import reverse
 from django.db import models
 from django.db.models.query import QuerySet
+from django.urls import reverse
 from django.utils.encoding import smart_str
 from django.utils.safestring import mark_safe
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 
 
 class ErrorManager(models.Manager):
@@ -33,7 +29,7 @@ class Error(models.Model):
 
     def __repr__(self):
         try:
-            u = six.text_type(self)
+            u = str(self)
         except (UnicodeEncodeError, UnicodeDecodeError):
             u = '[Bad Unicode data]'
         return smart_str(u'<Error: %s>' % u)
