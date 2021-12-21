@@ -16,7 +16,7 @@ if __name__ == '__main__':
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'demoproject.settings')
     import logging
 
-    l = logging.getLogger('raven.contrib.django.client.DjangoClient')
+    log = logging.getLogger('raven.contrib.django.client.DjangoClient')
 
     from django.core.management import execute_from_command_line
 
@@ -25,9 +25,10 @@ if __name__ == '__main__':
 
     try:
         execute_from_command_line(args)
-    except:
+    except BaseException:
         if debug_on_error:
-            import pdb, traceback
+            import pdb
+            import traceback
             type, value, tb = sys.exc_info()
             traceback.print_exc()
             pdb.post_mortem(tb)

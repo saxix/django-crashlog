@@ -32,7 +32,7 @@ setup(
     name='django-crashlog',
     version=get_version(init),
     url='https://github.com/saxix/django-strategy-field',
-    description="Django custom field to implement the strategy pattern",
+    description="Django Database Exception Logger",
     author='sax',
     author_email='sax@os4d.org',
     license='BSD',
@@ -42,7 +42,7 @@ setup(
     install_requires=install_requires,
     zip_safe=False,
     extras_require={
-        'tests': tests_require,
+        'test': tests_require,
         'dev': dev_require + tests_require,
     },
     platforms=['linux'],
@@ -50,13 +50,12 @@ setup(
         'Environment :: Web Environment',
         'Framework :: Django',
         'Framework :: Django :: 2.2',
-        'Framework :: Django :: 3.0',
-        'Framework :: Django :: 3.1',
+        'Framework :: Django :: 3.2',
+        'Framework :: Django :: 4.0',
         'Operating System :: OS Independent',
-        'Programming Language :: Python :: 3.6',
-        'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: 3.8',
         'Programming Language :: Python :: 3.9',
+        'Programming Language :: Python :: 3.10',
         'Intended Audience :: Developers'
     ]
 )

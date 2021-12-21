@@ -1,5 +1,4 @@
 import os
-
 import sys
 
 import pytest
@@ -15,12 +14,11 @@ def pytest_configure(config):
     sys.path.insert(0, os.path.join(HERE, 'demo'))
 
 
-
 @pytest.fixture()
 def error(db):
     return Error.objects.create(class_name='PermissionDenied',
-                         message='Error Message',
-                         traceback='',
-                         url='/',
-                         server_name='',
-                         )
+                                message='Error Message',
+                                traceback='',
+                                url='/',
+                                server_name='',
+                                )

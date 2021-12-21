@@ -44,7 +44,7 @@ def process_exception(exception, request=None, message_user=False):
         logger.critical(exc)
 
 
-class CrashLogMiddleware(object):
+class CrashLogMiddleware:
 
     def __init__(self, get_response=None):
         self.get_response = get_response
