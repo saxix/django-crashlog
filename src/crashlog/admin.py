@@ -1,4 +1,4 @@
-from admin_extra_urls.decorators import link
+from admin_extra_urls.api import button
 from admin_extra_urls.mixins import ExtraUrlMixin, _confirm_action
 from django.contrib import admin
 from django.db import connection
@@ -14,7 +14,7 @@ class ErrorAdmin(ExtraUrlMixin, admin.ModelAdmin):
     search_fields = ('username', 'class_name', 'message', 'url')
     ordering = ('-date_time',)
 
-    @link(label='Empty Log', css_class="btn btn-danger", icon="icon-trash icon-white")
+    @button(label='Empty Log', css_class="btn btn-danger", icon="icon-trash icon-white")
     def empty_log(self, request):
         def _action(request):
             cursor = connection.cursor()

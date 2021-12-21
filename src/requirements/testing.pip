@@ -4,6 +4,7 @@ pytest-cache
 pytest-cov
 pytest-django
 pytest-echo
+pytest-pythonpath
 pytest
 psycopg2
 pdbpp
