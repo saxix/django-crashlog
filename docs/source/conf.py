@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-#
 # Django site maintenance documentation build configuration file, created by
 # sphinx-quickstart on Sun Dec  5 19:11:46 2010.
 #
@@ -52,7 +50,7 @@ templates_path = ['_templates']
 source_suffix = '.rst'
 
 # The encoding of source files.
-#source_encoding = 'utf-8-sig'
+# source_encoding = 'utf-8-sig'
 
 # The master toctree document.
 master_doc = 'index'

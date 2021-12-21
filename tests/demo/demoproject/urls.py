@@ -3,7 +3,7 @@ from django.contrib.admin import autodiscover, site
 from django.contrib.auth.decorators import login_required
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.http import HttpResponse
-from django.urls import include, path
+from django.urls import path
 
 from crashlog.middleware import process_exception
 

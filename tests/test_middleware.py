@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 import pytest
 from django.contrib.auth.models import AnonymousUser, User
 from django.core.exceptions import PermissionDenied
